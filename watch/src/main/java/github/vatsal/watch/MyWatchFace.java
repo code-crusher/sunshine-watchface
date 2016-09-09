@@ -305,25 +305,25 @@ public class MyWatchFace extends CanvasWatchFaceService {
          * Captures tap event (and tap type) and toggles the background color if the user finishes
          * a tap.
          */
-        @Override
-        public void onTapCommand(int tapType, int x, int y, long eventTime) {
-            Resources resources = MyWatchFace.this.getResources();
-            switch (tapType) {
-                case TAP_TYPE_TOUCH:
-                    // The user has started touching the screen.
-                    break;
-                case TAP_TYPE_TOUCH_CANCEL:
-                    // The user has started a different gesture or otherwise cancelled the tap.
-                    break;
-                case TAP_TYPE_TAP:
-                    // The user has completed the tap gesture.
-                    mTapCount++;
-                    mBackgroundPaint.setColor(resources.getColor(mTapCount % 2 == 0 ?
-                            R.color.background : R.color.background2));
-                    break;
-            }
-            invalidate();
-        }
+//        @Override
+//        public void onTapCommand(int tapType, int x, int y, long eventTime) {
+//            Resources resources = MyWatchFace.this.getResources();
+//            switch (tapType) {
+//                case TAP_TYPE_TOUCH:
+//                    // The user has started touching the screen.
+//                    break;
+//                case TAP_TYPE_TOUCH_CANCEL:
+//                    // The user has started a different gesture or otherwise cancelled the tap.
+//                    break;
+//                case TAP_TYPE_TAP:
+//                    // The user has completed the tap gesture.
+//                    mTapCount++;
+//                    mBackgroundPaint.setColor(resources.getColor(mTapCount % 2 == 0 ?
+//                            R.color.background : R.color.background2));
+//                    break;
+//            }
+//            invalidate();
+//        }
 
         @Override
         public void onDraw(Canvas canvas, Rect bounds) {
